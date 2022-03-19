@@ -25,7 +25,7 @@ class LinkedList{
             current = current.next
         }
         current.next = node
-        
+        this.size++
     }
 
     // insert to specific index
