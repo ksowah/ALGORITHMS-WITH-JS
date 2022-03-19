@@ -25,11 +25,16 @@ class LinkedList{
             current = current.next
         }
         current.next = node
+        this.size++
     }
 
     // insert to specific index
 
     // clear list data
+    clearList(){
+        this.data = null
+        this. size = 0
+    }
 
     // print linked list data
     printListData(){
