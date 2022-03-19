@@ -32,8 +32,8 @@ class LinkedList{
 
     // clear list data
     clearList(){
-        this.data = null
-        this. size = 0
+        this.head = null
+        this.size = 0
     }
 
     // print linked list data
@@ -55,6 +55,9 @@ list.insertNode(42)
 
 // insert to last index
 list.insertToLastIndex(88)
+
+// clear list data
+list.clearList()
 
 // print list data
 list.printListData()
