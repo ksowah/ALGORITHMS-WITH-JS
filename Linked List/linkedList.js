@@ -50,7 +50,10 @@ class LinkedList{
 
     }
 
-    
+    // get the size of linked list
+    getListSize(){
+        console.log("This is the size of list >>> "+this.size);
+    }
 
     // clear list data
     clearList(){
@@ -88,4 +91,6 @@ list.insertToIndex(888, 2)
 // print list data
 list.printListData()
 
-console.log(list);
+// get the size of linked list
+list.getListSize()
+
