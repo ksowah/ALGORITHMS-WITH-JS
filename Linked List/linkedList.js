@@ -30,6 +30,7 @@ class LinkedList{
 
     // insert to specific index
     insertToIndex(data, index){
+        if(index > this.size) return
         let current = this.head
         let count = 1
         let newNext
@@ -61,10 +62,17 @@ class LinkedList{
         let current = this.head
         let count = 0
 
+        if(index === 0){
+           this.head = current.next
+           console.log(this.head);
+        }
+
         while(count <= index){
             current = current.next
             count++
         }
+
+        this.insertToLastIndex(current)
     }
 
     // clear list data
@@ -95,7 +103,7 @@ list.insertToLastIndex(88)
 list.insertToLastIndex(29)
 
 // insert to specific index
-list.insertToIndex(888, 3)
+list.insertToIndex(888, 2)
 
 // clear list data
 // list.clearList()
@@ -105,4 +113,6 @@ list.printListData()
 
 // get the size of linked list
 list.getListSize()
+
+// list.deleteAtIndex(0)
 
