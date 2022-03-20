@@ -36,6 +36,7 @@ class LinkedList{
 
         if(index === 0){
             this.head = new Node(data, this.head)
+            this.size++
         }else{
             while(count < index){
                 count++
@@ -44,11 +45,12 @@ class LinkedList{
         }
 
         newNext = current.next
-        console.log( ">>>>>"+newNext.data);
         current.next = new Node(data, newNext)
-
+        this.size++
 
     }
+
+    
 
     // clear list data
     clearList(){
