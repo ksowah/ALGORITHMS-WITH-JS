@@ -29,6 +29,16 @@ class LinkedList{
     }
 
     // insert to specific index
+    insertToIndex(data, index){
+        let current = this.head
+        let count = 0
+
+        if(index === 0){
+            this.head = new Node(data, this.head)
+        }
+
+        // while(count < index)
+    }
 
     // clear list data
     clearList(){
@@ -55,9 +65,10 @@ list.insertNode(42)
 
 // insert to last index
 list.insertToLastIndex(88)
+list.insertToLastIndex(29)
 
 // clear list data
-list.clearList()
+// list.clearList()
 
 // print list data
 list.printListData()
