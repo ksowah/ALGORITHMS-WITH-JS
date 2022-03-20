@@ -31,13 +31,23 @@ class LinkedList{
     // insert to specific index
     insertToIndex(data, index){
         let current = this.head
-        let count = 0
+        let count = 1
+        let newNext
 
         if(index === 0){
             this.head = new Node(data, this.head)
+        }else{
+            while(count < index){
+                count++
+                current = current.next
+            }
         }
 
-        // while(count < index)
+        newNext = current.next
+        console.log( ">>>>>"+newNext.data);
+        current.next = new Node(data, newNext)
+
+
     }
 
     // clear list data
@@ -66,6 +76,9 @@ list.insertNode(42)
 // insert to last index
 list.insertToLastIndex(88)
 list.insertToLastIndex(29)
+
+// insert to specific index
+list.insertToIndex(888, 2)
 
 // clear list data
 // list.clearList()
