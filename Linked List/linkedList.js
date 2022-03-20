@@ -37,10 +37,11 @@ class LinkedList{
         if(index === 0){
             this.head = new Node(data, this.head)
             this.size++
-        }else{
+        }
+        else{
             while(count < index){
-                count++
                 current = current.next
+                count++
             }
         }
 
@@ -52,7 +53,18 @@ class LinkedList{
 
     // get the size of linked list
     getListSize(){
-        console.log("This is the size of list >>> "+this.size);
+        console.log("This is the size of list >>> " + this.size);
+    }
+
+    // delete at specific index
+    deleteAtIndex(index){
+        let current = this.head
+        let count = 0
+
+        while(count <= index){
+            current = current.next
+            count++
+        }
     }
 
     // clear list data
@@ -83,7 +95,7 @@ list.insertToLastIndex(88)
 list.insertToLastIndex(29)
 
 // insert to specific index
-list.insertToIndex(888, 2)
+list.insertToIndex(888, 3)
 
 // clear list data
 // list.clearList()
